@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ueber mich — Fionn</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="wrap nav" id="nav">
+      <a class="brand" href="index.html">
+      <img src="images/profil.jpg"class="logo" /> Fionn </a>
+      <nav class="navlinks">
+        <a href="ueber.html">Über mich</a>
+        <a href="erfahrung.html">Erfahrung</a>
+        <a href="projekte.html">Projekte</a>
+        <a href="skills.html">Skills</a>
+        <a href="hobbys.html">Hobbys</a>
+        <a href="kontakt.html">Kontakt</a>
+      </nav>
+      <button class="menu-toggle" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section>
+      <div class="section-title"><h1>Über mich</h1></div>
+      <div class="grid cols-2">
+        <div class="card">
+          <h3>Werdegang</h3>
+          <p class="muted">Ich bin Informatiker Applikationsentwickler bei der <b>WISS</b>. Mich begeistert es, Probleme mit Code elegant zu loesen und Produkte zu bauen, die Menschen wirklich helfen.</p>
+          <p class="muted">Aktuell konzentriere ich mich auf Web‑Technologien und saubere Software‑Architektur.</p>
+        </div>
+        <div class="card">
+          <h3>Was mir wichtig ist</h3>
+          <ul class="muted">
+            <li>Verstaendlicher, wartbarer Code</li>
+            <li>Gute Developer‑Experience (DX)</li>
+            <li>Zuverlaessige Delivery & Teamkommunikation</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">© <span id="year"></span> Fionn · Portfolio — Applikationsentwickler bei der WISS</div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
+

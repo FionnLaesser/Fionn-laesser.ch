@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projekte — Fionn</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="wrap nav" id="nav">
+      <a class="brand" href="index.html">
+      <img src="images/profil.jpg"class="logo" /> Fionn </a>
+      <nav class="navlinks">
+        <a href="ueber.html">Über mich</a>
+        <a href="erfahrung.html">Erfahrung</a>
+        <a href="projekte.html">Projekte</a>
+        <a href="skills.html">Skills</a>
+        <a href="hobbys.html">Hobbys</a>
+        <a href="kontakt.html">Kontakt</a>
+      </nav>
+      <button class="menu-toggle" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section>
+      <div class="section-title">
+        <h1>Projekte</h1>
+        <span class="muted">Platzhalterbilder bitte ersetzen</span>
+      </div>
+      <div class="grid cols-3">
+        <article class="card project">
+          <img src="images/projekt-1.jpg" alt="Screenshot Projekt 1" />
+          <div>
+            <h3>Projekt 1: Edugame Modul</h3>
+            <p class="muted">Kleines Lern‑Spiel mit Login, Fortschrittsspeicher und responsiver UI.</p>
+            <div class="skills">
+              <span class="skill">HTML</span><span class="skill">CSS</span><span class="skill">JavaScript</span>
+            </div>
+          </div>
+        </article>
+        <article class="card project">
+          <img src="images/projekt-2.jpg" alt="Screenshot Projekt 2" />
+          <div>
+            <h3>Projekt 2: API Dashboard</h3>
+            <p class="muted">Fetch‑basierte Charts, Filter und Light/Dark‑Mode.</p>
+            <div class="skills">
+              <span class="skill">TypeScript</span><span class="skill">Charting</span><span class="skill">REST</span>
+            </div>
+          </div>
+        </article>
+        <article class="card project">
+          <img src="images/projekt-3.jpg" alt="Screenshot Projekt 3" />
+          <div>
+            <h3>Projekt 3: Mini CMS</h3>
+            <p class="muted">Kleines Content‑System mit Markdown‑Support.</p>
+            <div class="skills">
+              <span class="skill">Node.js</span><span class="skill">Express</span><span class="skill">SQLite</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">© <span id="year"></span> Fionn · Portfolio — Applikationsentwickler bei der WISS</div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
