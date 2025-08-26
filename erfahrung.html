@@ -5,12 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Erfahrung — Fionn</title>
   <link rel="stylesheet" href="styles.css" />
+
+  <!-- Favicon & App Icons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="icon" href="images/favicon.ico" sizes="any">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#CE1126"> 
 </head>
+
 <body>
   <header>
     <div class="wrap nav" id="nav">
       <a class="brand" href="index.html">
-      <img src="images/profil.jpg"class="logo" /> Fionn </a>
+        <img src="images/profil.jpg" class="logo" alt="Profilbild von Fionn" /> Fionn
+      </a>
       <nav class="navlinks">
         <a href="ueber.html">Über mich</a>
         <a href="erfahrung.html">Erfahrung</a>
@@ -30,14 +40,18 @@
         <div class="card exp-item">
           <div class="where">WISS — Applikationsentwicklung</div>
           <div class="muted">St.Gallen, Schweiz</div>
-          <div class="when">Sommer 2024 – heute</div>
-          <div class="muted" style="grid-column:1 / -1">Mitarbeit an Lern‑ und Praxisprojekten, Fokus auf Web‑Development, Testing und Versionskontrolle.</div>
+          <div class="when">Sommer 2024 – heute</div>
+          <div class="muted" style="grid-column:1 / -1">
+            Mitarbeit an Lern- und Praxisprojekten, Fokus auf Web-Development, Testing und Versionskontrolle.
+          </div>
         </div>
         <div class="card exp-item">
-          <div class="where">Persoenliche Projekte</div>
+          <div class="where">Persönliche Projekte</div>
           <div class="muted">Open Source & Learning</div>
-          <div class="when">2023 – heute</div>
-          <div class="muted" style="grid-column:1 / -1">Kleine Tools und Apps, um Konzepte wie REST‑APIs, Auth, Datenmodelle und UI‑Design zu vertiefen.</div>
+          <div class="when">2023 – heute</div>
+          <div class="muted" style="grid-column:1 / -1">
+            Kleine Tools und Apps, um Konzepte wie REST-APIs, Auth, Datenmodelle und UI-Design zu vertiefen.
+          </div>
         </div>
       </div>
     </section>
@@ -46,6 +60,9 @@
   <footer>
     <div class="wrap">© <span id="year"></span> Fionn · Portfolio — Applikationsentwickler bei der WISS</div>
   </footer>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
