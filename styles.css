@@ -255,10 +255,10 @@ section{ padding:3.2rem 0 }
 .sql    { --level: 100%; }
 .java   { --level: 85%; }
 .bash   { --level: 85%; }
+.git    { --level: 80%; }
 .html   { --level: 75%; }
 .css    { --level: 60%; }
 .linux  { --level: 60%; }
-.git    { --level: 40%; }
 .python { --level: 25%; }
 
 
@@ -334,4 +334,62 @@ footer{
   background: var(--card);
   border:1px solid rgba(255,255,255,.08);
   border-radius:14px;
+}
+/* CONTACT FORM */
+.contact-form {
+  background: var(--card);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+  margin-top: 2rem;
+}
+
+.contact-form h2 {
+  margin: 0 0 .5rem 0;
+  font-size: 1.4rem;
+}
+
+.contact-form label {
+  font-weight: 600;
+  margin-bottom: .3rem;
+  display: block;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: .7rem .9rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,.15);
+  background: rgba(255,255,255,.05);
+  color: var(--fg);
+  font-size: 1rem;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: 2px solid var(--accent);
+  border-color: var(--accent);
+}
+
+.contact-form button {
+  align-self: flex-start;
+  padding: .75rem 1.2rem;
+  border: 0;
+  border-radius: 999px;
+  background: linear-gradient(135deg,var(--accent),var(--accent-2));
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: transform .2s ease;
+}
+
+.contact-form button:hover {
+  transform: translateY(-2px);
 }

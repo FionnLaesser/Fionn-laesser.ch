@@ -45,6 +45,55 @@
 
       </div>
     </section>
+<form id="contactForm" action="https://formspree.io/f/xjkeybpv" method="POST" class="contact-form">
+  <h2>📩 Schreib mir eine Nachricht</h2>
+
+  <label for="email">Deine E-Mail</label>
+  <input type="email" id="email" name="email" required placeholder="z. B. max@beispiel.ch">
+
+  <label for="message">Deine Nachricht</label>
+  <textarea id="message" name="message" rows="5" required placeholder="Was moechtest du mir sagen?"></textarea>
+
+  <button type="submit">Senden</button>
+
+  <!-- Meldungen -->
+  <p id="formSuccess" style="display:none; color:var(--accent); font-weight:600; margin-top:.5rem;">
+    ✅ Danke! Deine Nachricht wurde gesendet.
+  </p>
+  <p id="formError" style="display:none; color:tomato; font-weight:600; margin-top:.5rem;">
+    ❌ Uups! Etwas ist schief gelaufen.
+  </p>
+</form>
+
+<script>
+document.getElementById("contactForm").addEventListener("submit", async function(e) {
+  e.preventDefault();
+  const form = e.target;
+  const data = new FormData(form);
+
+  try {
+    let response = await fetch(form.action, {
+      method: form.method,
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (response.ok) {
+      form.reset();
+      document.getElementById("formSuccess").style.display = "block";
+      document.getElementById("formError").style.display = "none";
+    } else {
+      document.getElementById("formError").style.display = "block";
+      document.getElementById("formSuccess").style.display = "none";
+    }
+  } catch (err) {
+    document.getElementById("formError").style.display = "block";
+    document.getElementById("formSuccess").style.display = "none";
+  }
+});
+</script>
+
+
   </main>
 
     <footer>
